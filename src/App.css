@@ -30,3 +30,9 @@
   width: 80px;
   margin-left: 12px;
 }
+
+.App footer {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-left: 5px;
+}

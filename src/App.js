@@ -47,6 +47,7 @@ export default function App() {
         </form>
         <Weather city={city} country={country} description={description} temp={temp} humidity={humidity} pressure={pressure} wind={wind} />
       </div>
+      <footer><a href="https://github.com/silkeblan/gimme-weather-react">Open-source code</a> by Silke Blansjaar</footer>
     </div>
   );
 }
