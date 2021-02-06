@@ -1,3 +1,11 @@
+.Weather .city-input {
+  margin: 0px 12px;
+}
+
+.Weather .submit-btn {
+  margin-right: 12px;
+}
+
 .Weather h2 {
   font-size: 32px;
   font-weight: normal;

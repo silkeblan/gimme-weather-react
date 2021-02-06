@@ -1,0 +1,9 @@
+.Forecast {
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.Forecast span {
+  opacity: 0.6;
+}
