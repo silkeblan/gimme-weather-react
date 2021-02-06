@@ -10,15 +10,17 @@ export default function Weather(props) {
         <br />
         {props.description}
       </p>
-      <div className="temp-div">
+      <div className="row">
+      <div className="temp-div col-6">
         <ReactAnimatedWeather icon="CLEAR_DAY" color="black" size={60} animate={true} />
         <span className="temperature">{Math.round(props.temp)}°C</span><span className="alt-unit"> | <a href="/">F</a></span>
       </div>
-      <ul>
+      <ul className="col-5">
         <li>Humidity: {props.humidity}%</li>
         <li>Pressure: {props.pressure}nPa</li>
         <li>Wind: {props.wind}mps</li>
       </ul>
+      </div>
     </div>
   )
 }

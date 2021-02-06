@@ -38,16 +38,20 @@ export default function App() {
   
   return (
     <div className="App">
+    <div className="container">
       <h1>GimmeWeather</h1>
-      <div className="app-card">
+      <div className="app-card card p-3">
         <form onSubmit={handleSubmit}>
-          <input type="search" placeholder="Enter a city..." className="city-input" onChange={changeCity}/>
-          <input type="submit" value="Search" className="submit-btn" />
-          <input type="button" value="Current" className="current-btn"/>
+          <div className="row">
+          <input type="search" placeholder="Enter a city..." className="city-input form-control col-6" onChange={changeCity} autoFocus={true}/>
+          <input type="submit" value="Search" className="submit-btn btn btn-primary col-2" />
+          <input type="button" value="Current" className="current-btn btn btn-warning col-2"/>
+          </div>
         </form>
         <Weather city={city} country={country} description={description} temp={temp} humidity={humidity} pressure={pressure} wind={wind} />
       </div>
-      <footer><a href="https://github.com/silkeblan/gimme-weather-react">Open-source code</a> by Silke Blansjaar</footer>
+      <footer><a href="https://github.com/silkeblan/gimme-weather-react" target="_blank">Open-source code</a> by Silke Blansjaar</footer>
+    </div>
     </div>
   );
 }
