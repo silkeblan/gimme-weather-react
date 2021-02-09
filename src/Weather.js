@@ -2,13 +2,13 @@ import axios from "axios";
 import React, { useState } from "react";
 import ReactAnimatedWeather from "react-animated-weather";
 import "./Weather.css"
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ready: false})
   
   function changeCity(event) {
     const city = event.target.value.trim().toLowerCase();
-    console.log(city);
   }
   
   function handleSubmit(event) {
@@ -24,7 +24,9 @@ export default function Weather(props) {
       temp: response.data.main.temp,
       humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
-      wind: response.data.wind.speed})
+      wind: response.data.wind.speed,
+      timestamp: response.data.dt * 1000
+  })
   }
 
   if (weatherData.ready) {
@@ -38,7 +40,7 @@ export default function Weather(props) {
           </div>
         </form>
         <h2 className="text-capitalize">{weatherData.city}, {weatherData.country}</h2>
-        <p className="time-and-description">Last updated: Friday, 12:04
+        <p className="time-and-description">Last updated: <FormattedDate timestamp={weatherData.timestamp} />
           <br />
           <span className="text-capitalize">{weatherData.description}</span>
         </p>
