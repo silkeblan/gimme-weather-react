@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from "./FormattedDate";
 import ReactAnimatedWeather from "react-animated-weather";
+import MainTemp from "./MainTemp";
 
 export default function WeatherDisplay(props) {
   return(
@@ -13,7 +14,7 @@ export default function WeatherDisplay(props) {
         <div className="row">
         <div className="temp-div col-6">
           <ReactAnimatedWeather icon="CLEAR_DAY" color="black" size={60} animate={true} />
-          <span className="temperature">{Math.round(props.data.temp)}°C</span><span className="alt-unit"> | <a href="/">F</a></span>
+          <MainTemp temp={props.data.temp} />
         </div>
         <ul className="col-5">
           <li>Humidity: {props.data.humidity}%</li>
