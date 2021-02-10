@@ -3,15 +3,29 @@
   margin: 0 auto;
 }
 
-.App .app-card {
-  background: white;
-}
-
 .App h1 {
   text-align: center;
+  font-family: "Rye", cursive;
+  margin-top: 15px;
+  color: tomato;
+}
+
+.App .app-card {
+  background: rgb(255, 236, 233);
+  border: none;
 }
 
 .App footer {
   font-size: 12px;
   margin: 5px 0 0 5px;
+  color: rgb(50, 79, 141);
+}
+
+.App a {
+  color: tomato;
+}
+
+.App a:hover {
+  color: rgb(50, 79, 141);
+  text-decoration: none;
 }

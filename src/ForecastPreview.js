@@ -10,12 +10,11 @@ export default function ForecastPreview(props) {
     return day
   }
   
-  console.log(props);
   return(
     <div className="ForecastPreview col-2">
       <span className="week-days">{formatDay()}</span>
       <WeatherIcon code={props.data.weather[0].icon} size={20} />
-      <span className="day-temps">{Math.round(props.data.temp.min)} <span className="min-temps">/ {Math.round(props.data.temp.max)}</span></span>
+      <span className="day-temps">{Math.round(props.data.temp.min)}° <span className="min-temps">/ {Math.round(props.data.temp.max)}°</span></span>
     </div>
   )
 }

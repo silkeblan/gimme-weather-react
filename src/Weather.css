@@ -1,15 +1,45 @@
 .Weather .city-input {
   margin: 0px 12px;
+  border: none;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.Weather .city-input:hover {
+  box-shadow: none;
 }
 
 .Weather .submit-btn {
   margin-right: 12px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  background: rgb(50, 79, 141);
+  border-color: rgb(50, 79, 141);
+  color: white;
+}
+
+.Weather .submit-btn:hover {
+  box-shadow: none;
+  background: rgb(27, 43, 77);
+  border-color: rgb(27, 43, 77);
+  color: white;
+}
+
+.Weather .current-btn {
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+  background: tomato;
+  border-color: tomato;
+  color: white;
+}
+
+.Weather .current-btn:hover {
+  box-shadow: none;
+  color: white;
+  background: rgb(158, 60, 43);
+  border-color: rgb(158, 60, 43);
 }
 
 .Weather h2 {
   font-size: 32px;
   font-weight: normal;
-  opacity: 0.6;
+  color: rgb(50, 79, 141);
   margin: 10px 0;
 }
 
@@ -17,6 +47,7 @@
   font-size: 12px;
   opacity: 0.6;
   margin-bottom: 20px;
+  color: rgb(27, 43, 77);
 }
 
 .Weather .temp-div {
@@ -28,6 +59,7 @@
   margin-left: 10px;
   position: relative;
   top: -12px;
+  color: rgb(27, 43, 77);
 }
 
 .Weather .alt-unit {
@@ -46,4 +78,5 @@
 .Weather li {
   font-size: 14px;
   opacity: 0.6;
+  color: rgb(27, 43, 77);
 }

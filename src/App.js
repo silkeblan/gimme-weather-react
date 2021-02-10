@@ -1,15 +1,11 @@
-import axios from "axios";
-import { useState } from "react";
 import './App.css';
 import Weather from "./Weather";
-import Forecast from "./Forecast";
-
 
 export default function App() {
   return (
     <div className="App">
     <div className="container">
-      <h1>GimmeWeather</h1>
+      <h1 className="p-2">GimmeWeather</h1>
       <div className="app-card card p-3">
         <Weather defaultCity="London"/>
       </div>
