@@ -28,6 +28,7 @@ export default function Weather(props) {
       city: response.data.name,
       country: response.data.sys.country,
       description: response.data.weather[0].description,
+      icon: response.data.weather[0].icon,
       temp: response.data.main.temp,
       humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
