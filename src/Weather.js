@@ -7,9 +7,22 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ready: false})
   const [city, setCity] = useState(props.defaultCity)
   
+  function showLocation(response) {
+    let lat = response.coords.latitude;
+    let long = response.coords.longitude;
+    let apiKey = "4e9ea9a24e8a511bcca72a1d94b39b40";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`
+    axios.get(apiUrl).then(displayWeather);
+  }
+
+  function getLocation(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(showLocation);
+  }
+  
   function search() {
-    let apiKey="4e9ea9a24e8a511bcca72a1d94b39b40";
-    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiKey = "4e9ea9a24e8a511bcca72a1d94b39b40";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayWeather);
   }
 
@@ -44,7 +57,7 @@ export default function Weather(props) {
           <div className="row">
             <input type="search" placeholder="Enter a city..." className="city-input form-control col-6" autoFocus={true} onChange={changeCity}/>
             <input type="submit" value="Search" className="submit-btn btn btn-primary col-2" />
-            <input type="button" value="Current" className="current-btn btn btn-warning col-2"/>
+            <input type="button" value="Current" className="current-btn btn btn-warning col-2" onClick={getLocation}/>
           </div>
         </form>
         <WeatherDisplay data={weatherData}/>
