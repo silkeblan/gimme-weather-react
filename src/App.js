@@ -9,7 +9,7 @@ export default function App() {
       <div className="app-card card p-3">
         <Weather defaultCity="London"/>
       </div>
-      <footer><a href="https://github.com/silkeblan/gimme-weather-react" target="_blank">Open-source code</a> by Silke Blansjaar</footer>
+      <footer><a href="https://github.com/silkeblan/gimme-weather-react" target="_blank" rel="noreferrer">Open-source code</a> by Silke Blansjaar</footer>
     </div>
     </div>
   );
