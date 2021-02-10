@@ -1,0 +1,33 @@
+.ForecastPreview {
+  padding: 10px 10px 15px 10px;
+  border-radius: 4px;
+  transition: all 150ms ease-in-out;
+}
+
+.ForecastPreview:hover {
+}
+
+.ForecastPreview {
+  text-align: center;
+  line-height: 1.8;
+}
+
+.ForecastPreview .week-days {
+  font-size: 9px;
+  opacity: 0.6;
+}
+
+.ForecastPreview canvas {
+  display: block;
+  margin: 5px auto 0 auto;
+  opacity: 0.6;
+}
+
+.ForecastPreview .day-temps {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.ForecastPreview .min-temps {
+  opacity: 0.6;
+}

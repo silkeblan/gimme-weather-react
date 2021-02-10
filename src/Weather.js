@@ -46,7 +46,9 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       pressure: response.data.main.pressure,
       wind: response.data.wind.speed,
-      timestamp: response.data.dt * 1000
+      timestamp: response.data.dt * 1000,
+      lat: response.data.coord.lat,
+      lon: response.data.coord.lon
   })
   }
 

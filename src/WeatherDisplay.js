@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
 import MainTemp from "./MainTemp";
+import Forecast from "./Forecast";
 
 export default function WeatherDisplay(props) {
   return(
@@ -13,7 +14,7 @@ export default function WeatherDisplay(props) {
         </p>
         <div className="row">
         <div className="temp-div col-6">
-          <WeatherIcon code={props.data.icon}/>
+          <WeatherIcon code={props.data.icon} size={60}/>
           <MainTemp temp={props.data.temp} />
         </div>
         <ul className="col-5">
@@ -22,6 +23,7 @@ export default function WeatherDisplay(props) {
           <li>Wind: {Math.round(props.data.wind)} m/s</li>
         </ul>
         </div>
+        <Forecast lat={props.data.lat} lon={props.data.lon} />
     </div>
   )
 }
